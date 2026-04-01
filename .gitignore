@@ -1,0 +1,23 @@
+# Large files
+results/hidden_states/*.npz
+results/logs/pipeline_data.json
+results/logs/pipeline_data_checkpoint.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Environment
+.env
+venv/
+.venv/
+
+# Keep results structure but not large data
+!results/hidden_states/.gitkeep
+!results/logs/.gitkeep
+!results/plots/.gitkeep
+results/logs/ablation_data.json
+results/logs/ablation_data_checkpoint.json
+.DS_Store

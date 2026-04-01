@@ -1,0 +1,66 @@
+{
+  "cascade_prediction": {
+    "auroc_early": 0.6521215233881164,
+    "auroc_late": 0.6097266118836916,
+    "advantage": 0.04239491150442476,
+    "finding": "WEAK EARLY WARNING: marginal advantage \u2014 geometry signal exists but is small",
+    "n_samples": 600,
+    "n_fail_s3": 562
+  },
+  "cascade_prediction_rich": {
+    "auroc_early_3feat": 0.6521215233881164,
+    "auroc_early_5feat": 0.6622432048040455,
+    "auroc_late": 0.6097266118836916,
+    "advantage_3feat": 0.04239491150442476,
+    "advantage_5feat": 0.05251659292035393,
+    "cosine_gain": 0.010121681415929173,
+    "n_samples": 600,
+    "n_fail_s3": 562,
+    "note": "cosine_gain = improvement from adding cosine drift feature (VAR-6 loose end)"
+  },
+  "latent_detection": {
+    "n_latent": 3,
+    "result": "INSUFFICIENT_SAMPLES",
+    "note": "[all] Only 3 LATENT \u2014 need \u226510",
+    "auroc_all_samples": null,
+    "auroc_clean_samples": null,
+    "n_boundary_excluded": 79,
+    "interpretation": "See sub-results"
+  },
+  "persona_direction": {
+    "result": "INSUFFICIENT_LATENT",
+    "n_latent": 3,
+    "note": "Only 3 LATENT samples \u2014 need \u226510 for AUROC estimate",
+    "direction_extracted": true,
+    "direction_s3_auroc": 0.6484788678155388
+  },
+  "context_ablation": {
+    "n_standard": 150,
+    "n_noctx": 150,
+    "standard": {
+      "AMPLIFIED": 0.67,
+      "CASCADE": 90.0,
+      "LATENT": 0.67,
+      "CORRECT": 5.33,
+      "ISOLATED": 0.67
+    },
+    "noctx": {
+      "AMPLIFIED": 1.33,
+      "CASCADE": 92.0,
+      "LATENT": 0.67,
+      "CORRECT": 4.0,
+      "ISOLATED": 0.0
+    },
+    "amplified_drop_pct": -0.67,
+    "p4_confirmed": false,
+    "mechanism": "MODEL_BEHAVIOR_COLLAPSE: context-free ablation does not reduce AMPLIFIED \u2014 cascade is intrinsic. GUARDIAN should prioritize ABSTAIN over REGENERATE."
+  },
+  "cascade_vs_safe_auroc": null,
+  "prediction_checks": {
+    "P2_confirmed": false,
+    "P4_confirmed": false,
+    "P5_confirmed": null,
+    "P1_confirmed": true,
+    "P1_cascade_latent_pct_noncorrect": 95.4
+  }
+}
