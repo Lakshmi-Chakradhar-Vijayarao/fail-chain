@@ -1,3 +1,9 @@
+> **Status (October 2026): the headline results in this README are superseded.**
+> The α = 0.9947 and 92.3% cascade results below were computed with ROUGE-L labels. A later re-audit with two independent LLM judges showed that ROUGE-L inflates persistent-error rates (97.3% → 67.0% in the scaled study), that the hidden-state "early warning" signal tracked answer length, and, in a pre-registered test, that measured question difficulty alone predicts failure (AUROC 0.96–0.97 on NQ-open) with no detectable added information from the probe.
+> Corrected analysis: [`agentic-failure-taxonomy`](https://github.com/Lakshmi-Chakradhar-Vijayarao/agentic-failure-taxonomy). The re-audit with measured difficulty is in revision. The original text is kept below for the record.
+
+---
+
 # Once Wrong, Always Wrong — α = 0.9947
 ## FAIL-CHAIN — Geometric Signatures of Failure Propagation in Multi-Step LLM Pipelines
 
